@@ -1,0 +1,56 @@
+namespace Calculator
+{
+    class Calculator
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Aplikasi Calculator";
+
+            Console.WriteLine("Kalkulator Sederhana");
+
+            char operasi;
+            int angka1 = 0;
+            int angka2 = 0;
+
+            Console.WriteLine("Pilih Menu Kalkulator :");
+            Console.WriteLine("1. Penjumlahan");
+            Console.WriteLine("2. Pengurangan");
+            Console.WriteLine("3. Perkalian");
+            Console.WriteLine("4. Pembagian");
+
+            Console.WriteLine("Input nomor menu [1,2,3,4] : ");
+            operasi = Console.ReadLine()[0];
+
+            Console.WriteLine("Inputkan nilai a : ");
+            angka1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Inputkan nilai b : ");
+            angka2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Masukkan Operator : ");
+            switch (Console.ReadLine())
+            {
+                case "+":
+                    var total = angka1 + angka2;
+                    Console.WriteLine("Hasil : " + total);
+                    break;
+
+                case "-":
+                    var totalKurang = angka1 - angka2;
+                    Console.WriteLine("Hasil : " + totalKurang);
+                    break;
+                case "*":
+                    double totalKali = angka1 * angka2;
+                    Console.WriteLine("Hasil : " + totalKali);
+                    break;
+                case "/":
+                    var totalBagi = (double)angka1 / angka2;
+                    Console.WriteLine("Hasil : " + totalBagi);
+                    break;
+            }
+
+            Console.WriteLine("Tekan Sembarang Key untuk Keluar.");
+            Console.ReadKey();
+        }
+    }
+}
